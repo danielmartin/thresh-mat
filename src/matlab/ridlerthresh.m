@@ -37,8 +37,8 @@ function threshold = ridlerthresh(img, tolerance)
 
 %  Created: August 2012
 
-if nargin < 1
-  error('ridlerthresh: you must provide an input image'); 
+if nargin < 1 || nargin > 2
+  error('ridlerthresh: you must provide an input image and, optionally, a tolerance'); 
 elseif nargin < 2
   tolerance = 0.5;
 end	
@@ -46,9 +46,9 @@ end
 % Check if input image is rgb and convert to a gray-level image
 if ndims(img) == 3
   img = rgb2gray(img);
-end 
+end
 
-[hist,x] = imhist(img);
+n = 256;
 
 m = mean2(img);
 
@@ -67,6 +67,5 @@ while true
     break
   end
 end	
-threshold = threshold / 255;
 
-end
+threshold = threshold / n;

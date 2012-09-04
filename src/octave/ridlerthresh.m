@@ -26,7 +26,7 @@
 
 function threshold = ridlerthresh(img, tolerance)
   
-  if (nargin < 1)
+  if (nargin < 1 || nargin > 2)
     print_usage();
   elseif (nargin < 2)
     tolerance = 0.5;
@@ -35,9 +35,9 @@ function threshold = ridlerthresh(img, tolerance)
   ## Check if input image is rgb and convert to a gray-level image
   if (ndims(img) == 3)
     img = rgb2gray(img);
-  endif 
+  endif
 
-  [hist,x] = imhist(img);
+  n = 256; 
 
   m = mean2(img);
 
@@ -56,6 +56,7 @@ function threshold = ridlerthresh(img, tolerance)
       break
     endif
   endwhile	
-  threshold = threshold / 255;
+  
+  threshold = threshold / n;
 
 endfunction
