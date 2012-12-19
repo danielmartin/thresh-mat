@@ -1,36 +1,42 @@
 function threshold = momentsthresh(img)
-%MOMENTSTHRESH Compute an image threshold value using preservation of image moments, as proposed by Tsai.
-%  MOMENTSTHRESH returns an integer between 0 and 1 that represents a normalized image threshold value 
-%  that segments the input image, according to Tsai's moment-preservation algorithm (see reference).
-%  
-%  Synopsis:
-%      threshold = momentsthresh(img)
+%MOMENTSTHRESH Compute an image threshold value using preservation
+% of image moments, as proposed by Tsai. MOMENTSTHRESH returns an
+% integer between 0 and 1 that represents a normalized image
+% threshold value that segments the input image, according to Tsai's
+% moment-preservation algorithm (see reference).
 %
-%  Input:
-%      img       = input image to be segmented (required)
-%  
-%  Output:
-%      threshold = value between 0 and 1 representing the threshold.
+%  Synopsis: 
+%           threshold = momentsthresh(img)
 %
-%  Reference:
-%      Tsai W. (1985) Moment-preserving thresholding: a new approach, Computer Vision, Graphics, and Image Processing, vol. 29, pp. 377-393
+%  Input: 
+%         img = input image to be segmented (required)
 %
-%  Copyright (C) 2012 Daniel Martín 
+%  Output: 
+%         threshold = value between 0 and 1 representing the
+%                     threshold.
+%
+%  Reference: 
+%         Tsai W. (1985) Moment-preserving thresholding: a new
+%  approach, Computer Vision, Graphics, and Image Processing, vol.
+%  29, pp. 377-393
+%
+%  Author: Daniel Martín
 %
 %  This file is part of Thresh-mat.
 %
-%  Thresh-mat is free software; you can redistribute it and/or modify
-%  it under the terms of the GNU General Public License as published by
-%   the Free Software Foundation; either version 2 of the License, or
-%  (at your option) any later version.
+%  Thresh-mat is free software; you can redistribute it and/or
+%  modify it under the terms of the GNU General Public License as
+%  published by the Free Software Foundation; either version 2 of
+%  the License, or (at your option) any later version.
 %
 %  This program is distributed in the hope that it will be useful,
 %  but WITHOUT ANY WARRANTY; without even the implied warranty of
-%  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-%  GNU General Public License for more details.
+%  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+%  General Public License for more details.
 %
 %  You should have received a copy of the GNU General Public License
-%  along with Thresh-mat; If not, see <http://www.gnu.org/licenses/>.
+%  along with Thresh-mat; If not, see
+%  <http://www.gnu.org/licenses/>.
 
 %  Created: September 2012
 

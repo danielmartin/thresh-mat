@@ -18,7 +18,7 @@ function threshold = ridlerthresh(img, tolerance)
 %  Reference:
 %      Ridler TW, Calvard S. (1978) "Picture thresholding using an iterative selection method", IEEE Trans. System, Man and Cybernetics, SMC-8: 630-632
 %
-%  Copyright (C) 2012 Daniel Martín 
+%  Author: Daniel Martín 
 %
 %  This file is part of Thresh-mat.
 %

@@ -1,31 +1,32 @@
-## Copyright (C) 2012 Daniel Martín 
+## Copyright (C) 2012 Daniel Martín
 ##
 ## This file is part of Thresh-mat.
 ##
 ## Thresh-mat is free software; you can redistribute it and/or modify
-## it under the terms of the GNU General Public License as published by
-## the Free Software Foundation; either version 2 of the License, or
-## (at your option) any later version.
+## it under the terms of the GNU General Public License as published
+## by the Free Software Foundation; either version 2 of the License,
+## or (at your option) any later version.
 ##
-## This program is distributed in the hope that it will be useful,
-## but WITHOUT ANY WARRANTY; without even the implied warranty of
-## MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-## GNU General Public License for more details.
+## This program is distributed in the hope that it will be useful, but
+## WITHOUT ANY WARRANTY; without even the implied warranty of
+## MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+## General Public License for more details.
 ##
 ## You should have received a copy of the GNU General Public License
 ## along with Thresh-mat; If not, see <http://www.gnu.org/licenses/>.
 
-## -*- texinfo -*-
-## @deftypefn {Function File} {} ridlerthresh (@var{img},@var{tolerance})
-## RIDLERTHRESH(img) returns an integer between 0 and 1 that represents a normalized image threshold value 
-## that segments the input image, according to Ridler/Calvard's algorithm.
+## -*- texinfo -*- 
+## @deftypefn {Function File} {} ridlerthresh (@var{img},@var{tolerance}) 
+## RIDLERTHRESH(img) returns an integer between 0 and 1 that 
+## represents a normalized image threshold value that segments the 
+## input image, according to Ridler/Calvard's algorithm. 
 ## @end deftypefn
 
-## Author: Daniel Martín <dmartin1@estumail.ucm.es>
+## Author: Daniel Martín <dmartin1@ucm.es>
 ## Created: August 2012
 
 function threshold = ridlerthresh(img, tolerance)
-  
+	 
   if (nargin < 1 || nargin > 2)
     print_usage();
   elseif (nargin < 2)
